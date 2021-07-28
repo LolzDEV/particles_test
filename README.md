@@ -1,12 +1,13 @@
-# Particles Test [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+# Particles Test 
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![build](https://github.com/LolzDEV/particles_test/actions/workflows/rust.yml/badge.svg)](https://github.com/LolzDEV/particles_test/actions/workflows/rust.yml)
 
-### :warning: This is a test!
+## :warning: This is a test!
 This is not supposed to be a playable game, it's just a test made by me for fun and for trying creating something concrete with the Rust Programming Language
 
-### PRs are welcome
+## PRs are welcome
 As I said before this is just a test but if you like it and you want to contribute or modify the game, feel free to do it! Isn't this the coolest part of OpenSource?
 
-### Usage
+## Usage
 
 There are a few controls:
 
@@ -21,3 +22,9 @@ There are a few controls:
 There are also only 2 types of particles (at the moment):
 - **Sand**: This particle is subjected to "real" sand physics
 - **Wood**: This particle is just static, it can be used as floor or containment for sand
+
+## Screenshots
+### Simple Sand Pyramids
+![screenshot](./assets/screenshot.png)
+### A wooden working hourglass
+![screenshot2](./assets/screenshot2.png)
