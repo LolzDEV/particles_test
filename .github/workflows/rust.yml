@@ -11,10 +11,11 @@ env:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
+    - name: Check out repository code
     - uses: actions/checkout@v2
+    - name: Install sdl2
+    - run: sudo apt install libsdl2-dev
     - name: Build
       run: cargo build --verbose
