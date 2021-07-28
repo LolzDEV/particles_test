@@ -28,3 +28,28 @@ There are also only 2 types of particles (at the moment):
 ![screenshot](./assets/screenshot.png)
 ### A wooden working hourglass
 ![screenshot2](./assets/screenshot2.png)
+
+## Building
+If you want to build this game you need to have the SDL2 library installed in your system.
+
+On Ubuntu:
+
+```sudo apt install libsdl2-dev```
+
+On Fedora:
+
+```sudo dnf install SDL2-devel```
+
+On Arch:
+
+```sudo pacman -S sdl2```
+
+On MacOS (with homebrew)
+
+```brew install sdl2```
+
+```export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"```
+
+On windows:
+
+Installing a library on Windows it's tediuos and I don't want to cover it here also because I don't have a windows machine to try on, so you can google it :)
