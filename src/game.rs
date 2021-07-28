@@ -204,5 +204,68 @@ impl Particle for Wood {
 
 pub enum ParticleType {
     WOOD,
-    SAND
+    SAND,
+    WATER
+}
+
+pub struct Water {
+    pub x: i32,
+    pub y: i32,
+    pub does_exists: bool
+}
+
+impl Particle for Water {
+    fn get_x(&self) -> i32 {
+        self.x
+    }
+
+    fn get_y(&self) -> i32 {
+        self.y
+    }
+
+    fn set_x(&mut self, x: i32) {
+        self.x = x;
+    }
+
+    fn set_y(&mut self, y: i32) {
+        self.y = y;
+    }
+
+    fn get_color(&self) -> Color {
+        Color::RGB(66, 135, 245)
+    }
+
+    fn does_exists(&self) -> bool {
+        self.does_exists
+    }
+
+    fn destroy(&mut self) {
+        self.does_exists = false;
+    }
+
+    fn update(&mut self, width: i32, height: i32, positions: &mut HashMap<(i32, i32), bool>) {
+        if self.get_y() + 2 < height && *positions.get(&(self.get_x(), self.get_y() + 2)).unwrap() == false {
+            positions.insert((self.get_x(), self.get_y()), false);
+            self.set_y(self.get_y() + 2);
+            positions.insert((self.get_x(), self.get_y()), true);
+        } else if self.get_y() + 2 < height && self.get_x() + 2 < width && *positions.get(&(self.get_x() + 2, self.get_y() + 2)).unwrap() == false {
+            positions.insert((self.get_x(), self.get_y()), false);
+            self.set_y(self.get_y() + 2);
+            self.set_x(self.get_x() + 2);
+            positions.insert((self.get_x(), self.get_y()), true);
+        }  else if self.get_y() + 2 < height && self.get_x() - 2 >= 0 && *positions.get(&(self.get_x() - 2, self.get_y() + 2)).unwrap() == false {
+            positions.insert((self.get_x(), self.get_y()), false);
+            self.set_y(self.get_y() + 2);
+            self.set_x(self.get_x() - 2);
+            positions.insert((self.get_x(), self.get_y()), true);
+        } else if self.get_x() + 2 < width &&  *positions.get(&(self.get_x() + 2, self.get_y())).unwrap() == false {
+            positions.insert((self.get_x(), self.get_y()), false);
+            self.set_x(self.get_x() + 2);
+            positions.insert((self.get_x(), self.get_y()), true);
+        } else if self.get_x() - 2 >= 0 &&  *positions.get(&(self.get_x() - 2, self.get_y())).unwrap() == false {
+            positions.insert((self.get_x(), self.get_y()), false);
+            self.set_x(self.get_x() - 2);
+            positions.insert((self.get_x(), self.get_y()), true);
+        }
+    }
 }

@@ -18,16 +18,20 @@ There are a few controls:
 - **LMB**: spawns selected particle in the brush area
 - **1**: selects *sand* as current particle 
 - **2**: selects *wood* as current particle 
+- **3**: selects *water* as current particle
 
-There are also only 2 types of particles (at the moment):
+There are also only 3 types of particles (at the moment):
 - **Sand**: This particle is subjected to "real" sand physics
 - **Wood**: This particle is just static, it can be used as floor or containment for sand
+- **Water**: This particle just like water, flows left/right and also is affected by gravity
 
 ## Screenshots
 ### Simple Sand Pyramids
 ![screenshot](./assets/screenshot.png)
 ### A wooden working hourglass
 ![screenshot2](./assets/screenshot2.png)
+### A "waterfall"
+![screenshot3](./assets/screenshot3.png)
 
 ## Building
 If you want to build this game you need to have the SDL2 library installed in your system.
