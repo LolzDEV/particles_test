@@ -16,6 +16,8 @@ jobs:
     - name: Check out repository code
     - uses: actions/checkout@v2
     - name: Install sdl2
-    - run: sudo apt install libsdl2-dev
+      run: | 
+        sudo apt update
+        sudo apt install libsdl2-dev
     - name: Build
       run: cargo build --verbose
