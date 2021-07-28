@@ -53,3 +53,9 @@ On MacOS (with homebrew)
 On windows:
 
 Installing a library on Windows it's tediuos and I don't want to cover it here also because I don't have a windows machine to try on, so you can google it :)
+
+After installing SDL2 you can just type inside the project folder:
+
+```cargo build```
+
+and you're done! (you need to have cargo and rust installed on your machine)
